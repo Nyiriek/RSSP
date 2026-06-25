@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background: #0b5d2a;
+    color: white;
+    padding: 15px;
+}
+
+.logo {
+    position: relative;
+    width: 320px;
+    height: 70px;
+}
+
+.logo-container img {
+    position: absolute;
+    max-height: 0px;
+    width: auto;
+    transition: opacity 0.4s ease;
+}
+
+.logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: auto;
+
+    transition: opacity 0.4s ease;
+}
+
+.logo-box {
+    width: 40px;
+    height: 40px;
+    background: #166534;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.party-name {
+    position: absolute;
+    top: 50%;
+    left: 78px; /* controls how close text is to the logo */
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+    white-space: nowrap;
+    line-height: 1;
+    transition: color 0.4s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #16a34a;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px;
+    background: #f1f8e9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+
+        display: none;
+        padding: 20px;
+    }
+
+     .nav-links a {
+        text-decoration: none;
+        color: #16a34a;
+        font-weight: 600;
+    }
+
+    .nav-links a:hover {
+        color: #166534;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

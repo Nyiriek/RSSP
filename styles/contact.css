@@ -1,0 +1,276 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #16a34a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+/* HEADER AFTER SCROLL */
+
+.header.scrolled {
+    background: #166534;
+    /* Green */
+    border-bottom: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: logo circle */
+
+.header.scrolled .logo-box {
+    background: #ffffff;
+    color: #166534;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    position: relative;
+    width: 320px;
+    height: 70px;
+}
+
+.logo-container img {
+    position: absolute;
+
+    max-height: 70px;
+    width: auto;
+
+    transition: opacity 0.4s ease;
+}
+
+.logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: auto;
+    transition: opacity 0.4s ease;
+}
+
+.party-name {
+    position: absolute;
+    top: 50%;
+    left: 78px;
+    /* controls how close text is to the logo */
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 800;
+    color: #166534;
+    white-space: nowrap;
+    line-height: 1;
+    transition: color 0.4s ease;
+}
+
+/* White logo visible */
+
+/* .logo-white {
+    opacity: 2;
+} */
+
+/* Black logo hidden */
+
+/* .logo-black {
+    opacity: 0;
+} */
+
+/* Scrolled state */
+
+/* .header.scrolled .logo-container {
+    background: #ffffff;
+}
+
+.header.scrolled .logo-white {
+    opacity: 0;
+}
+
+.header.scrolled .logo-black {
+    opacity: 1;
+} */
+
+/* After scrolling */
+
+/* .logo-container {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header.scrolled .logo-container {
+    border: 2px solid #e5e7eb;
+} */
+
+.logo-container {
+    position: relative;
+
+    width: 180px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #16a34a;
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.header.scrolled .menu-toggle {
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px;
+    margin-top: 6.3rem;
+    background: #f1f8e9;
+}
+
+.form-section {
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* CTA */
+.cta {
+    background: #0b5d2a;
+    color: white;
+    height: auto;
+    text-align: center;
+    padding: 57px 20px;
+}
+
+.cta h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        display: none;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 2fr;
+    }
+
+    .cta {
+        background: #0b5d2a;
+        color: white;
+        height: auto;
+        text-align: center;
+        padding: 56px 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #16a34a;
+        font-weight: 600;
+    }
+
+
+    .nav-links a:hover {
+        color: #166534;
+    }
+}

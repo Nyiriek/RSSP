@@ -1,0 +1,526 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #16a34a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+/* HEADER AFTER SCROLL */
+
+.header.scrolled {
+    background: #166534;
+    border-bottom: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Make nav links white when header turns green */
+
+.header.scrolled .nav-links a,
+.header.scrolled .logo {
+    color: #ffffff;
+}
+
+/* Optional: logo circle */
+
+.header.scrolled .logo-box {
+    background: #ffffff;
+    color: #166534;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    position: relative;
+    width: 320px;
+    height: 70px;
+}
+
+.logo-container img {
+    position: absolute;
+    max-height: 70px;
+    width: auto;
+    transition: opacity 0.4s ease;
+}
+
+.logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: auto;
+    transition: opacity 0.4s ease;
+}
+
+.party-name {
+    position: absolute;
+    top: 50%;
+    left: 78px;
+    /* controls how close text is to the logo */
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 800;
+    color: #166534;
+    font-weight: bolder;
+    white-space: nowrap;
+    line-height: 1;
+    transition: color 0.4s ease;
+}
+
+.header.scrolled .party-name {
+    color: #ffffff;
+}
+
+/* White logo visible */
+
+.logo-white {
+    opacity: 2;
+}
+
+/* Black logo hidden */
+
+.logo-black {
+    opacity: 1;
+}
+
+/* Scrolled state */
+
+.header.scrolled .logo-container {
+    background: #ffffff;
+}
+
+.header.scrolled .logo-white {
+    opacity: 0;
+}
+
+.header.scrolled .logo-black {
+    opacity: 1;
+}
+
+/* After scrolling */
+
+.logo-container {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header.scrolled .logo-container {
+    border: 2px solid #e5e7eb;
+}
+
+.logo-container {
+    position: relative;
+
+    width: 180px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #16a34a;
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.header.scrolled .menu-toggle {
+    color: white;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url("/images/dr.jpeg") center center / cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 60, 30, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+.primary {
+    background: green;
+    color: white;
+}
+
+.secondary {
+    background: white;
+    color: green;
+}
+
+.mission {
+    padding: 70px 20px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.mission h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #166534;
+}
+
+.mission p {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.values {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f7faf7;
+}
+
+.values .card {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    height: 100%;
+    background: #fff;
+}
+
+.values h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #166534;
+}
+
+.values-card {
+    text-align: center;
+    overflow: hidden;
+    width: 90%;
+}
+
+.values-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.values-image img {
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.values-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #166534;
+}
+
+.events {
+    padding: 80px 20px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.events .card {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    height: 15rem;
+    /* width: 11rem;          */
+    background: #fff;
+}
+
+.events h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #166534;
+}
+
+.leadership {
+    padding: 70px 20px;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.leadership .card {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    height: 100%;
+    background: #fff;
+}
+
+.leader-card {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.leader-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.leadership h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #166534;
+}
+
+.leader-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #166534;
+}
+
+.leader-card .role {
+    font-weight: 700;
+    color: #15803d;
+    margin-bottom: 12px;
+}
+
+.leader-card p:last-child {
+    color: #555;
+    line-height: 1.7;
+}
+
+.center {
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.btn-outline {
+    padding: 8px 12px;
+    text-decoration: none;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    border-bottom: #0b5d2a;
+}
+
+.grid-3 {
+    display: grid;
+    /* grid-template-columns: repeat(2, 2fr); */
+    grid-template-columns: repeat(2, minmax(480px, 600px));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    border-bottom: #0b5d2a;
+}
+
+/* LEADERSHIP AVATAR */
+.avatar {
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CTA */
+.cta {
+    background: #0b5d2a;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        display: none;
+        padding: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #16a34a;
+        font-weight: 600;
+    }
+
+    .nav-links a:hover {
+        color: #166534;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .grid-3 {
+        display: grid;
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: repeat(2, minmax(180px, 190px));
+        gap: 15px;
+        justify-content: center;
+        margin-top: 30px;
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 65vh;
+        background-size: 200%;
+        background-position: center top bottom;
+    }
+
+    .values-card {
+        text-align: center;
+        overflow: hidden;
+        width: 100%;
+        height: 50%;
+    }
+
+    .values-image {
+        width: auto;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .values-image img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover no-repeat;
+        display: block;
+        border-radius: 5px;
+    }
+}
