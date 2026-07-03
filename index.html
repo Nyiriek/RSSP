@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Political Party</title>
+    <link rel="icon" type="image/x-icon" href="images/RSSP.ico">
+    <title>Revive South Sudan Party</title>
 
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -28,6 +29,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="platform.html">Platform</a></li>
                 <li><a href="team.html">Team</a></li>
+                <li><a href="manifesto.html">Manifesto</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
@@ -45,8 +47,24 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="platform.html" class="btn primary">See Our Platform</a>
-                <a href="contact.html" class="btn secondary">Get Involved</a>
+                <a href="platform.html" class="btn-primary">See Our Platform</a>
+                <div class="dropdown">
+                    <button class="donate-btn dropdown-btn" id="dropdownBtn">
+                        Get Involved ▾
+                    </button>
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuIegIoo9Q-x_YPi3ZZmCwF9omv0bfS22C2qd9lghjm7_erA/viewform"
+                            target="_blank">
+                            English
+                        </a>
+
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuIegIoo9Q-x_YPi3ZZmCwF9omv0bfS22C2qd9lghjm7_erA/viewform"
+                            target="_blank">
+                            العربية
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -185,7 +203,8 @@
     <section class="cta">
         <h2>Join Us in Making a Difference</h2>
         <p>Your voice matters. Get involved and help shape the future of our community.</p>
-        <a href="contact.html" class="btn primary">Contact Us Today</a>
+        <a href="contact.html" class="btn-primary">Contact Us Today</a>
+        <a href="donate.html" class="donate-btn">Donate</a>
     </section>
 
     <script src="js/main.js"></script>

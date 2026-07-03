@@ -185,6 +185,12 @@ form {
     flex-direction: column;
 }
 
+#form-status {
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
 input,
 textarea {
     margin-bottom: 15px;
@@ -260,7 +266,7 @@ button {
         color: white;
         height: auto;
         text-align: center;
-        padding: 56px 20px;
+        padding: 80px 20px;
     }
 
     .nav-links a {
