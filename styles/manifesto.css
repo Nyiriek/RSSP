@@ -1,0 +1,227 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #16a34a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+/* HEADER AFTER SCROLL */
+
+.header.scrolled {
+    background: #166534;
+    border-bottom: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Make nav links white when header turns green */
+
+.header.scrolled .nav-links a,
+.header.scrolled .logo {
+    color: #ffffff;
+}
+
+/* Optional: logo circle */
+
+.header.scrolled .logo-box {
+    background: #ffffff;
+    color: #166534;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    position: relative;
+    width: 320px;
+    height: 70px;
+}
+
+.logo-container img {
+    position: absolute;
+    max-height: 70px;
+    width: auto;
+    transition: opacity 0.4s ease;
+}
+
+.logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: auto;
+    transition: opacity 0.4s ease;
+}
+
+.party-name {
+    position: absolute;
+    top: 50%;
+    left: 78px;
+    /* controls how close text is to the logo */
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 800;
+    color: #166534;
+    font-weight: bolder;
+    white-space: nowrap;
+    line-height: 1;
+    transition: color 0.4s ease;
+}
+
+.header.scrolled .party-name {
+    color: #ffffff;
+}
+
+/* White logo visible */
+
+.logo-white {
+    opacity: 2;
+}
+
+/* Black logo hidden */
+
+.logo-black {
+    opacity: 1;
+}
+
+/* Scrolled state */
+
+.header.scrolled .logo-container {
+    background: #ffffff;
+}
+
+.header.scrolled .logo-white {
+    opacity: 0;
+}
+
+.header.scrolled .logo-black {
+    opacity: 1;
+}
+
+/* After scrolling */
+
+.logo-container {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header.scrolled .logo-container {
+    border: 2px solid #e5e7eb;
+}
+
+.logo-container {
+    position: relative;
+
+    width: 180px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #16a34a;
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.header.scrolled .menu-toggle {
+    color: white;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url("/images/dr.jpeg") center center / cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 60, 30, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+}
+
+.p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}

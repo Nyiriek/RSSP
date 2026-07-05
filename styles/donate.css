@@ -1,0 +1,105 @@
+.donation-section {
+  padding: 60px 20px;
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+}
+
+.donation-container {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.donation-container h2 {
+  margin-bottom: 10px;
+}
+
+.donation-container p {
+  margin-bottom: 20px;
+  color: #6b7280;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.custom-amount {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Donate button */
+.donate-btn {
+    background: red;
+    color: white;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* box-shadow: 0 4px 10px rgba(22, 163, 74, 0.25); */
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.05),
+        0 10px 15px rgb(255, 0, 8);
+}
+
+.donate-btn::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: -6px;
+    height: 10px;
+    background: rgba(0, 255, 100, 0.35);
+    filter: blur(8px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.donate-btn:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(22, 163, 74, 0.35);
+}
+
+.donate-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(22, 163, 74, 0.2);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .donation-container {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  button.donate-btn {
+    width: 100%;
+  }
+}

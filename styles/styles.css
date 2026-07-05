@@ -181,6 +181,47 @@ body {
     color: white;
 }
 
+/* Donate button */
+.donate-btn {
+    background: green;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* box-shadow: 0 4px 10px rgba(22, 163, 74, 0.25); */
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.05),
+        0 10px 15px rgba(0, 255, 100, 0.18);
+}
+
+.donate-btn::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: -6px;
+    height: 10px;
+    background: rgba(0, 255, 100, 0.35);
+    filter: blur(8px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.donate-btn:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(22, 163, 74, 0.35);
+}
+
+.donate-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(22, 163, 74, 0.2);
+}
+
 /* HERO */
 .hero {
     height: 100vh;
@@ -210,7 +251,65 @@ body {
 
 .hero-buttons {
     margin-top: 20px;
+    /* box-shadow: 0 6px 0 rgba(0, 0, 0, 0.05),
+        0 10px 15px rgba(0, 255, 100, 0.18);
+    overflow: hidden;
+    z-index: 100; */
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    min-width: 160px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background: #f3f4f6;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+/* show on hover (desktop) */
+/* .dropdown:hover .dropdown-menu {
+    display: block;
+} */
+
+/* .lang-switcher {
+  margin-top: -47px;
+  margin-left: 25.5rem;
+}
+
+.lang-switcher select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid greenyellow;
+  font-size: 14px;
+} */
 
 .btn {
     padding: 12px 20px;
@@ -309,7 +408,6 @@ body {
     border: 1px solid #eee;
     border-radius: 10px;
     height: 15rem;
-    /* width: 11rem;          */
     background: #fff;
 }
 
@@ -443,6 +541,55 @@ body {
     line-height: 1.8;
 }
 
+.btn-primary {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.08),
+        0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.06),
+        0 14px 25px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary::after {
+    content: "";
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: -6px;
+    height: 10px;
+    background: rgba(37, 99, 235, 0.35);
+    filter: blur(8px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* .btn-primary::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -6px;
+  height: 10px;
+  background: rgba(0, 255, 100, 0.35);
+  filter: blur(8px);
+  border-radius: 50%;
+  z-index: -1;
+} */
+
 /* RESPONSIVE */
 
 /* MOBILE */
@@ -463,7 +610,7 @@ body {
         padding: 20px;
     }
 
-    .nav-links a {
+    .header.scrolled .nav-links a {
         text-decoration: none;
         color: #16a34a;
         font-weight: 600;
@@ -500,6 +647,31 @@ body {
         background-size: 200%;
         background-position: center top bottom;
     }
+
+   .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    min-width: 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+  .dropdown-menu a {
+    text-align: center;
+    padding: 14px;
+  }
 
     .values-card {
         text-align: center;

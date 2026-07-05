@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/donate.css">
+</head>
+
+<body>
+
+    <section class="donation-section">
+        <div class="donation-container">
+
+            <h2>Support Revive South Sudan</h2>
+            <p>Your contribution helps fund community programs, education, and outreach.</p>
+
+            <form id="donationForm">
+
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Phone Number (optional)</label>
+                <input type="tel" placeholder="+211 ...">
+
+                <label>Donation Amount (USD)</label>
+                <select required>
+                    <option value="">Select amount</option>
+                    <option value="5">$5</option>
+                    <option value="10">$10</option>
+                    <option value="25">$25</option>
+                    <option value="50">$50</option>
+                    <option value="100">$100</option>
+                    <option value="custom">Custom Amount</option>
+                </select>
+
+                <input type="number" placeholder="Enter custom amount" class="custom-amount">
+
+                <label>Message (optional)</label>
+                <textarea placeholder="Leave a message..."></textarea>
+
+                <button type="submit" class="donate-btn">Donate Now</button>
+
+            </form>
+
+        </div>
+    </section>
+</body>
+
+</html>
