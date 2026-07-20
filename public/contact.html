@@ -26,43 +26,39 @@
             <div class="menu-toggle" id="menu-toggle">☰</div>
 
             <ul class="nav-links" id="nav-links">
-                <li><a href="/public/index.html">Home</a></li>
-                <li><a href="/public/about.html">About</a></li>
-                <li><a href="/public/platform.html">Platform</a></li>
-                <li><a href="/public/team.html">Team</a></li>
-                <li><a href="/public/manifesto.html">Manifesto</a></li>
-                <li><a href="/public/contact.html">Contact</a></li>
+                <li><a href="/public/index.html" data-i18n="home">Home</a></li>
+                <li><a href="/public/about.html" data-i18n="about">About</a></li>
+                <li><a href="/public/platform.html" data-i18n="platform">Platform</a></li>
+                <li><a href="/public/team.html" data-i18n="team">Team</a></li>
+                <li><a href="/public/manifesto.html" data-i18n="manifesto">Manifesto</a></li>
+                <li><a href="/public/contact.html" data-i18n="contact">Contact</a></li>
             </ul>
+
+            <select id="langSwitcher" class="lang-switcher">
+                <option value="en">EN</option>
+                <option value="ar">AR</option>
+                <option value="fr">FR</option>
+                <option value="sw">SW</option>
+            </select>
 
         </div>
     </header>
 
     <section class="hero">
-        <h1>Contact Us</h1>
+        <h1 data-i18n="contact_hero_title">Contact Us</h1>
     </section>
 
     <section class="form-section">
         <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder="contact_name_placeholder" required>
 
-            <section class="form-section">
+            <input type="email" name="email" placeholder="Email" data-i18n-placeholder="contact_email_placeholder" required>
 
-                <form id="contact-form">
+            <textarea name="message" placeholder="Message" data-i18n-placeholder="contact_message_placeholder" required></textarea>
 
-                    <input type="text" name="name" placeholder="Your Name" required>
-
-                    <input type="email" name="email" placeholder="Email" required>
-
-                    <textarea name="message" placeholder="Message" required></textarea>
-
-                    <button type="submit">
-                        Send Message
-                    </button>
-
-                </form>
-
-                <p id="status"></p>
-
-            </section>
+            <button type="submit" data-i18n="contact_send">
+                Send Message
+            </button>
 
         </form>
 
@@ -71,9 +67,9 @@
 
     <!-- CTA -->
     <section class="cta">
-        <h2>Join Us in Making a Difference</h2>
-        <p>Your voice matters. Get involved and help shape the future of our community.</p>
-        <a href="/public/donate.html" class="donate-btn">Donate Now</a>
+        <h2 data-i18n="cta_title">Join Us in Making a Difference</h2>
+        <p data-i18n="cta_subtitle">Your voice matters. Get involved and help shape the future of our community.</p>
+        <a href="/public/donate.html" class="donate-btn" data-i18n="donate">Donate Now</a>
     </section>
 
     <script src="/js/main.js"></script>

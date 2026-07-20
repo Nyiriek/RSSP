@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/images/RSSP.ico">
-    <title>Document</title>
+    <title>Donation</title>
     <link rel="stylesheet" href="/styles/donate.css">
 </head>
 
@@ -13,43 +13,50 @@
 
     <section class="donation-section">
         <div class="donation-container">
+            <select id="langSwitcher" class="lang-switcher">
+                <option value="en">EN</option>
+                <option value="ar">AR</option>
+                <option value="fr">FR</option>
+                <option value="sw">SW</option>
+            </select>
 
-            <h2>Support Revive South Sudan</h2>
-            <p>Your contribution helps fund community programs, education, and outreach.</p>
+            <h2 data-i18n="donate_title">Support Revive South Sudan</h2>
+            <p data-i18n="donate_subtitle">Your contribution helps fund community programs, education, and outreach.</p>
 
             <form id="donationForm">
 
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter your full name" required>
+                <label data-i18n="donate_full_name">Full Name</label>
+                <input type="text" placeholder="Enter your full name" data-i18n-placeholder="donate_full_name_placeholder" required>
 
-                <label>Email Address</label>
-                <input type="email" placeholder="Enter your email" required>
+                <label data-i18n="donate_email">Email Address</label>
+                <input type="email" placeholder="Enter your email" data-i18n-placeholder="donate_email_placeholder" required>
 
-                <label>Phone Number (optional)</label>
-                <input type="tel" placeholder="+211 ...">
+                <label data-i18n="donate_phone">Phone Number (optional)</label>
+                <input type="tel" placeholder="+211 ..." data-i18n-placeholder="donate_phone_placeholder">
 
-                <label>Donation Amount (USD)</label>
+                <label data-i18n="donate_amount">Donation Amount (USD)</label>
                 <select required>
-                    <option value="">Select amount</option>
+                    <option value="" data-i18n="donate_select_amount">Select amount</option>
                     <option value="5">$5</option>
                     <option value="10">$10</option>
                     <option value="25">$25</option>
                     <option value="50">$50</option>
                     <option value="100">$100</option>
-                    <option value="custom">Custom Amount</option>
+                    <option value="custom" data-i18n="donate_custom_amount">Custom Amount</option>
                 </select>
 
-                <input type="number" placeholder="Enter custom amount" class="custom-amount">
+                <input type="number" placeholder="Enter custom amount" class="custom-amount" data-i18n-placeholder="donate_custom_amount_placeholder">
 
-                <label>Message (optional)</label>
-                <textarea placeholder="Leave a message..."></textarea>
+                <label data-i18n="donate_message">Message (optional)</label>
+                <textarea placeholder="Leave a message..." data-i18n-placeholder="donate_message_placeholder"></textarea>
 
-                <button type="submit" class="donate-btn">Donate Now</button>
+                <button type="submit" class="donate-btn" data-i18n="donate">Donate Now</button>
 
             </form>
 
         </div>
     </section>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

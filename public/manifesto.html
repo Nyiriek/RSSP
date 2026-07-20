@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/styles/manifesto.css">
     <title>Our Manifestos</title>
 </head>
+
 <body>
 
     <header class="header">
@@ -21,24 +23,35 @@
             </a>
 
             <div class="menu-toggle" id="menu-toggle">☰</div>
+
             <ul class="nav-links" id="nav-links">
-                <li><a href="/public/index.html">Home</a></li>
-                <li><a href="/public/about.html">About</a></li>
-                <li><a href="/public/platform.html">Platform</a></li>
-                <li><a href="/public/team.html">Team</a></li>
-                <li><a href="/public/manifesto.html">Manifesto</a></li>
-                <li><a href="/public/contact.html">Contact</a></li>
+                <li><a href="/public/index.html" data-i18n="home">Home</a></li>
+                <li><a href="/public/about.html" data-i18n="about">About</a></li>
+                <li><a href="/public/platform.html" data-i18n="platform">Platform</a></li>
+                <li><a href="/public/team.html" data-i18n="team">Team</a></li>
+                <li><a href="/public/manifesto.html" data-i18n="manifesto">Manifesto</a></li>
+                <li><a href="/public/contact.html" data-i18n="contact">Contact</a></li>
             </ul>
+
+            <!-- 🌍 LANGUAGE SWITCHER -->
+            <select id="langSwitcher" class="lang-switcher">
+                <option value="en" class="lang-dropdown">EN</option>
+                <option value="ar" class="lang-dropdown">AR</option>
+                <option value="fr" class="lang-dropdown">FR</option>
+                <option value="sw" class="lang-dropdown">SW</option>
+            </select>
 
         </div>
     </header>
 
     <main>
         <section class="manifesto">
-            <h1>Our Manifestos</h1>
-            <p>Here you can find our party's manifestos and policy proposals.</p>
+            <h1 data-i18n="manifesto_hero_title">Our Manifestos</h1>
+            <p data-i18n="manifesto_hero_text">Here you can find our party's manifestos and policy proposals.</p>
         </section>
     </main>
 
+    <script src="/js/main.js"></script>
 </body>
+
 </html>

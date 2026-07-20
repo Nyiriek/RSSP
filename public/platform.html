@@ -26,40 +26,47 @@
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="/public/index.html">Home</a></li>
-            <li><a href="/public/about.html">About</a></li>
-            <li><a href="/public/platform.html">Platform</a></li>
-            <li><a href="/public/team.html">Team</a></li>
-            <li><a href="/public/manifesto.html">Manifesto</a></li>
-            <li><a href="/public/contact.html">Contact</a></li>
+            <li><a href="/public/index.html" data-i18n="home">Home</a></li>
+            <li><a href="/public/about.html" data-i18n="about">About</a></li>
+            <li><a href="/public/platform.html" data-i18n="platform">Platform</a></li>
+            <li><a href="/public/team.html" data-i18n="team">Team</a></li>
+            <li><a href="/public/manifesto.html" data-i18n="manifesto">Manifesto</a></li>
+            <li><a href="/public/contact.html" data-i18n="contact">Contact</a></li>
         </ul>
+
+        <select id="langSwitcher" class="lang-switcher">
+            <option value="en">EN</option>
+            <option value="ar">AR</option>
+            <option value="fr">FR</option>
+            <option value="sw">SW</option>
+        </select>
 
     </div>
 </header>
 
 <section class="hero">
-    <h1>Our Political Platform</h1>
+    <h1 data-i18n="platform_hero_title">Our Political Platform</h1>
 </section>
 
 <section class="grid">
     <div class="card">
-        <h3>Education</h3>
-        <p>Improving access to quality education for all citizens.</p>
+        <h3 data-i18n="platform_education_title">Education</h3>
+        <p data-i18n="platform_education_text">Improving access to quality education for all citizens.</p>
     </div>
 
     <div class="card">
-        <h3>Healthcare</h3>
-        <p>Affordable and accessible healthcare services.</p>
+        <h3 data-i18n="platform_healthcare_title">Healthcare</h3>
+        <p data-i18n="platform_healthcare_text">Affordable and accessible healthcare services.</p>
     </div>
 
     <div class="card">
-        <h3>Economy</h3>
-        <p>Job creation and support for small businesses.</p>
+        <h3 data-i18n="platform_economy_title">Economy</h3>
+        <p data-i18n="platform_economy_text">Job creation and support for small businesses.</p>
     </div>
 
     <div class="card">
-        <h3>Infrastructure</h3>
-        <p>Better roads, electricity, and digital access.</p>
+        <h3 data-i18n="platform_infrastructure_title">Infrastructure</h3>
+        <p data-i18n="platform_infrastructure_text">Better roads, electricity, and digital access.</p>
     </div>
 </section>
 

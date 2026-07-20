@@ -3,6 +3,82 @@ body {
     font-family: Arial;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        direction: ltr;
+        gap: 10px;
+        min-height: 78px;
+    }
+
+    .logo {
+        grid-column: 1;
+        justify-self: start;
+        width: 220px;
+        max-width: 42vw;
+        height: 58px;
+    }
+
+    .logo img {
+        height: 58px;
+    }
+
+    .party-name {
+        left: 64px;
+        font-size: 0.72rem;
+        max-width: 140px;
+        white-space: normal;
+        line-height: 1.1;
+    }
+
+    .lang-switcher {
+        grid-column: 2;
+        justify-self: center;
+        width: 68px;
+        min-height: 36px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        z-index: 2;
+    }
+
+    .menu-toggle {
+        grid-column: 3;
+        justify-self: end;
+        line-height: 1;
+        z-index: 2;
+    }
+
+    html[dir="rtl"] .logo {
+        grid-column: 3;
+        justify-self: end;
+    }
+
+    html[dir="rtl"] .logo img {
+        left: auto;
+        right: 0;
+    }
+
+    html[dir="rtl"] .party-name {
+        left: auto;
+        right: 64px;
+        text-align: right;
+    }
+
+    html[dir="rtl"] .menu-toggle {
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    html[dir="rtl"] .nav-links {
+        direction: rtl;
+        text-align: right;
+    }
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -156,5 +232,86 @@ body {
 
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 10px;
+        min-height: 78px;
+    }
+
+    .logo {
+        grid-column: 1;
+        justify-self: start;
+        width: 220px;
+        max-width: 42vw;
+        height: 58px;
+    }
+
+    .logo img {
+        height: 58px;
+    }
+
+    .party-name {
+        left: 64px;
+        font-size: 0.72rem;
+        max-width: 140px;
+        white-space: normal;
+        line-height: 1.1;
+    }
+
+    .lang-switcher {
+        grid-column: 2;
+        justify-self: center;
+        width: 68px;
+        min-height: 36px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        z-index: 2;
+    }
+
+    .menu-toggle {
+        grid-column: 3;
+        justify-self: end;
+        line-height: 1;
+        z-index: 2;
+    }
+
+    html[dir="rtl"] .logo {
+        grid-column: 3;
+        justify-self: end;
+    }
+
+    html[dir="rtl"] .logo img {
+        left: auto;
+        right: 0;
+    }
+
+    html[dir="rtl"] .party-name {
+        left: auto;
+        right: 64px;
+        text-align: right;
+    }
+
+    html[dir="rtl"] .menu-toggle {
+        grid-column: 1;
+        justify-self: start;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        direction: ltr;
+    }
+
+    html[dir="rtl"] .nav-links {
+        direction: rtl;
+        text-align: right;
     }
 }
