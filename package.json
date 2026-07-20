@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Nyiriek/RSSP#readme",
   "dependencies": {
+    "@express-rate-limit/tsconfig": "^1.0.5",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "ex": "^0.1.4",
